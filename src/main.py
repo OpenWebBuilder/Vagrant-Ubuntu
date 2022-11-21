@@ -1,10 +1,11 @@
-import this
 from vagrantfile import *
+
 
 def print_hi(name):
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-def newInstance():
+
+def new_instance():
     v1 = Vagrantfile("wordpress", max_instances=3, create_another=False)
     v1.new_instance()
     print(v1.get_location())
@@ -12,7 +13,7 @@ def newInstance():
 
 if __name__ == '__main__':
     print_hi('PyCharm')
-    newInstance()
+    new_instance()
     # this.startServer()
 
     u = uni.Uni()
