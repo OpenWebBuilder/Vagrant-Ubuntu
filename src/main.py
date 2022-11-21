@@ -1,4 +1,6 @@
+import uni
 from vagrantfile import *
+from instance import *
 
 
 def print_hi(name):
@@ -6,15 +8,21 @@ def print_hi(name):
 
 
 def new_instance():
-    v1 = Vagrantfile("wordpress", max_instances=3, create_another=False)
-    v1.new_instance()
-    print(v1.get_location())
+    vf = Vagrantfile("wordpress", max_instances=3, create_another=False, help=True)
+    vf.new_instance()
+    print(Vagrantfile.help)
+
+    return vf
 
 
 if __name__ == '__main__':
     print_hi('PyCharm')
-    new_instance()
-    # this.startServer()
+    vf = new_instance()
 
-    u = uni.Uni()
-    u.open_vagrant()
+    print(vf.get_location())
+
+    uni = uni.Uni()
+    print(uni.machine_dir)
+    uni.open_vagrant()
+
+    # vm = instance.Instance(vf)
