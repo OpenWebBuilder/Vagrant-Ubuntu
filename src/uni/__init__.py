@@ -8,10 +8,15 @@ class Uni:
         self.vagrant_home = f"{pathlib.Path.home()}/.uni/hyperion/vagrant"
         self.machine_dir = f"{self.vagrant_home}/machine"
 
-        os.makedirs(self.vagrant_home, exist_ok=True)
+        self.init()
+    def init(self):
+        os.makedirs(self.machine_dir, exist_ok=True)
 
     def get_machine_dir(self):
         return self.machine_dir
+
+    def get_vagrant_home(self):
+        return self.vagrant_home
 
     def open_dir(self, dir):
         if platform.system() == "Windows":

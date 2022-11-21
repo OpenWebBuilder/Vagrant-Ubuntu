@@ -8,7 +8,9 @@ def print_hi(name):
 
 
 def new_instance():
-    vf = Vagrantfile("wordpress", max_instances=3, create_another=False, help=True)
+    multiple = False #True
+
+    vf = Vagrantfile("wordpress", max_instances=3, create_another=multiple, help=True)
     vf.new_instance()
     print(Vagrantfile.help)
 
@@ -23,6 +25,7 @@ if __name__ == '__main__':
 
     uni = uni.Uni()
     print(uni.machine_dir)
-    uni.open_vagrant()
+    # uni.open_vagrant()
+    uni.open_machine()
 
     # vm = instance.Instance(vf)

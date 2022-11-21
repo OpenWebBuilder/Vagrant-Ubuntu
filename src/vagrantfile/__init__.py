@@ -41,7 +41,7 @@ class Vagrantfile:
         max_instances = False
 
         while self.exists(try_location):
-            if ( (suffix <= self.max_instances - 2) and self.create_another):
+            if (suffix <= self.max_instances - 2) and self.create_another:
                 try_location = f"{self.uni.get_vagrant_home()}/{self.name}{suffix}"
                 self.location = try_location
                 suffix += 1
