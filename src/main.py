@@ -1,31 +1,20 @@
+import Instance
 import uni
-from vagrantfile import *
-from instance import *
+from oldVagrantfile import Vagrantfile
+from Instance import Instance
 
-
-def print_hi(name):
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-def new_instance():
-    multiple = False #True
-
-    vf = Vagrantfile("wordpress", max_instances=3, create_another=multiple, help=True)
-    vf.new_instance()
-    print(Vagrantfile.help)
-
-    return vf
-
+def testit():
+    unios = uni.Uni()
+    unios.open_machine()
 
 if __name__ == '__main__':
-    print_hi('PyCharm')
-    vf = new_instance()
+    # vfile = new_instance()
+    # print(vfile.get_location())
+    # inst.get_info()
+    # print(inst.foo)
+    # print("Hello")
 
-    print(vf.get_location())
+    v_file = Vagrantfile()
 
-    uni = uni.Uni()
-    print(uni.machine_dir)
-    # uni.open_vagrant()
-    uni.open_machine()
-
-    # vm = instance.Instance(vf)
+    # new_in = Instance(v_file)
+    # new_in.get_foo()

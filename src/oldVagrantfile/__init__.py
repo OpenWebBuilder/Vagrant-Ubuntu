@@ -3,7 +3,7 @@ import os.path
 import template
 import uni
 
-# Specify Vagrantfile location #43
+# Specify oldVagrantfile location #43
 # https://github.com/pycontribs/python-vagrant/issues/43
 
 default_name = "ubuntu-LTS-server"
@@ -12,7 +12,7 @@ default_box = "generic/ubuntu2204"
 
 class Vagrantfile:
     """
-    Create a Vagrantfile
+    Create a oldVagrantfile
     """
     help = False
     def __init__(self, name=default_name, box=default_box, max_instances=5, create_another=False, help=False):
@@ -29,7 +29,7 @@ class Vagrantfile:
 
         if self.help:
             Vagrantfile.help = True
-        # init new instance
+        # init new Instance
         # self.new_instance()
 
     def exists(self, try_location):
