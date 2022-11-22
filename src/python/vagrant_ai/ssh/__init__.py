@@ -1,4 +1,4 @@
-from fabric import *
+from ssh import *
 import vagrant
 from vagrantfile import Vagrantfile
 

@@ -1,5 +1,5 @@
 from vagrantfile import Vagrantfile
-from fabric import SSH
+from ssh import SSH
 
 name = "wordpress"
 
@@ -14,6 +14,7 @@ def named():
     vm1.up()
 
 # named()
+
 
 def test_ssh():
     vm1 = Vagrantfile(name)
