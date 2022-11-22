@@ -56,8 +56,7 @@ class Vagrantfile:
         print(f"name {name}, state {state}, provider {provider}")
 
     def is_running(self):
-        print(self.vagrant.status()[0][1] == "running")
-        return True
+        return self.vagrant.status()[0][1] == "running"
 
     def get_ssh(self):
         self.vagrant.ssh()
@@ -65,3 +64,5 @@ class Vagrantfile:
 
     def __str__(self):
         return f"{self.name}, {self.box}, {self.path}"
+
+# https://github.com/pycontribs/python-vagrant
