@@ -1,20 +1,10 @@
-import Instance
-import uni
-from oldVagrantfile import Vagrantfile
-from Instance import Instance
+from uni import Uni
+from vagrantfile import Vagrantfile
 
-def testit():
-    unios = uni.Uni()
-    unios.open_machine()
+Uni.init()
 
-if __name__ == '__main__':
-    # vfile = new_instance()
-    # print(vfile.get_location())
-    # inst.get_info()
-    # print(inst.foo)
-    # print("Hello")
+print(Uni())
 
-    v_file = Vagrantfile()
+vm1 = Vagrantfile()
 
-    # new_in = Instance(v_file)
-    # new_in.get_foo()
+vm1.make_vagrantfile()

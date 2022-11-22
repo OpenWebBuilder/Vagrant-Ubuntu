@@ -1,33 +1,17 @@
-import pathlib
-import os
-import platform
-import subprocess
+import os, pathlib
+
 
 class Uni:
+    vagrant_home = f"{pathlib.Path.home()}/.uni/hyperion/vagrant"
+    instance_dir = f"{vagrant_home}/instance"
+
     def __init__(self):
-        self.vagrant_home = f"{pathlib.Path.home()}/.uni/hyperion/vagrant"
-        self.machine_dir = f"{self.vagrant_home}/machine"
+        Uni.init()
 
-        self.init()
-    def init(self):
-        os.makedirs(self.machine_dir, exist_ok=True)
+    @classmethod
+    def init(cls):
+        os.makedirs(cls.instance_dir, exist_ok=True)
 
-    def get_machine_dir(self):
-        return self.machine_dir
-
-    def get_vagrant_home(self):
-        return self.vagrant_home
-
-    def open_dir(self, dir):
-        if platform.system() == "Windows":
-            os.startfile(dir)
-        elif platform.system() == "Darwin":
-            subprocess.Popen(["open", dir])
-        else:
-            subprocess.Popen(["xdg-open", dir])
-
-    def open_vagrant(self):
-        self.open_dir(self.vagrant_home)
-
-    def open_machine(self):
-        self.open_dir(self.machine_dir)
+    @classmethod
+    def __str__(cls):
+        return f"{cls.vagrant_home}, {cls.instance_dir}"

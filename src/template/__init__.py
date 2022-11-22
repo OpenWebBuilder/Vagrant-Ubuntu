@@ -1,7 +1,9 @@
 
 class UbuntuLTS:
-    default_box = "generic/ubuntu2204"
-    box = default_box
-    def __init__(self, box=default_box):
-        # overwrite default box
-        UbuntuLTS.box = box
+    name = "UbuntuLTS"
+    box = "generic/ubuntu2204"
+    kvm = True
+
+    @classmethod
+    def __str__(cls):
+        return f"{cls.name}, {cls.box}, kvm={cls.kvm}"
