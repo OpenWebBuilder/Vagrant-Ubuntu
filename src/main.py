@@ -1,10 +1,16 @@
-from uni import Uni
 from vagrantfile import Vagrantfile
 
-Uni.init()
 
-print(Uni())
+def default():
+    vm1 = Vagrantfile()
+    vm1.open_dir()
+    vm1.make_vagrantfile()
 
-vm1 = Vagrantfile()
 
-vm1.make_vagrantfile()
+def named():
+    vm1 = Vagrantfile("foobar")
+    vm1.open_dir()
+    vm1.make_vagrantfile()
+
+
+named()

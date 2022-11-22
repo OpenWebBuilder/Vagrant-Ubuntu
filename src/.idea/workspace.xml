@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1d77eb7-2258-4f0a-af22-a114bc234d7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/vagrantfile/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/uni/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Instance/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Instance/old.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vagrantfile/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oldVagrantfile/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/broken.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uni/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uni/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vagrantfile/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/vagrantfile/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
