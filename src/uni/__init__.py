@@ -15,3 +15,7 @@ class Uni:
     @classmethod
     def __str__(cls):
         return f"{cls.vagrant_home}, {cls.instance_dir}"
+
+    @staticmethod
+    def has_kvm_libvirt():
+        return False
