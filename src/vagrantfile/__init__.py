@@ -59,5 +59,9 @@ class Vagrantfile:
         print(self.vagrant.status()[0][1] == "running")
         return True
 
+    def get_ssh(self):
+        self.vagrant.ssh()
+        # Todo:
+
     def __str__(self):
         return f"{self.name}, {self.box}, {self.path}"
