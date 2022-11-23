@@ -22,5 +22,6 @@ def test_ssh():
     conn = SSH(vm1)
     print(conn.test_ssh_string())
 
-
-test_ssh()
+if __name__ == '__main__':
+    print_hi('Hello Vagrant.AI')
+    test_ssh()
