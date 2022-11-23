@@ -18,6 +18,7 @@ def named():
 
 def test_ssh():
     vm1 = Vagrantfile(name)
+    print(vm1.up())
     conn = SSH(vm1)
     print(conn.test_ssh_string())
 

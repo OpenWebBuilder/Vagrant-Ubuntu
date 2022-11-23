@@ -1,7 +1,4 @@
 from ssh import *
-import vagrant
-from vagrantfile import Vagrantfile
-
 
 class SSH:
     def __init__(self, vagrant_instance):
