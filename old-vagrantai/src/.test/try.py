@@ -1,5 +1,5 @@
-from vagrantfile import Vagrantfile
-from ssh import SSH
+from vagrantai.vagrantfile import Vagrantfile
+from vagrantai.ssh import SSH
 
 name = "wordpress"
 
@@ -21,7 +21,3 @@ def test_ssh():
     print(vm1.up())
     conn = SSH(vm1)
     print(conn.test_ssh_string())
-
-if __name__ == '__main__':
-    print_hi('Hello Vagrant.AI')
-    test_ssh()
